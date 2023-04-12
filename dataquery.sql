@@ -1,14 +1,4 @@
--- 1.- Soal 1
--- 2.	Tampilkan seluruh data produk diurutkan berdasarkan harga_jual mulai dari yang termahal
-SELECT * from produk ORDER BY harga_jual DESC;
--- 3.	Tampilkan data kode, nama, tmp_lahir, tgl_lahir dari table pelanggan
-Select kode, nama_pelanggan, tmp_lahir, tgl_lahir from pelanggan;
--- 4.	Tampilkan kode,nama,stok dari table produk yang stok-nya hanya 4
-SELECT kode,nama, stok from produk WHERE stok=4;
--- 5.	Tampilkan seluruh data pelanggan yang tempat lahirnya Jakarta
-SELECT * from pelanggan WHERE tmp_lahir='jakarta';
--- 6.	Tampilkan kode, nama, tmp_lahir, tgl_lahir dari pelanggan diurutkan dari yang paling muda usianya
-SELECT kode, nama_pelanggan, tmp_lahir, tgl_lahir from pelanggan ORDER BY tgl_lahir DESC;
+
 
 -- Soal 2
 -- 1.	Tampilkan data produk yang stoknya 3 dan 10
