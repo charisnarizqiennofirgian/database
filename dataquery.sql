@@ -1,45 +1,44 @@
 
-
 -- Soal 2
--- 1.	Tampilkan data produk yang stoknya 3 dan 10
+
 SELECT * from produk WHERE stok=3 OR stok=10;
--- 2.	Tampilkan data produk yang harga jualnya kurang dari 5 juta tetapi lebih dari 500 ribu
+-- 2.	
 SELECT * FROM produk WHERE harga_jual < 5000000 AND harga_jual > 500000;
--- 3.	Tampilkan data produk yang harus segera ditambah stoknya
+-- 3.	
 SELECT * FROM produk WHERE min_stok > stok;
--- 4.	Tampilkan data pelanggan mulai dari yang paling muda
+-- 4.	
 SELECT * FROM pelanggan ORDER BY tgl_lahir DESC;
--- 5.	Tampilkan data pelanggan yang lahirnya di Jakarta dan gendernya perempuan
+-- 5.	
 SELECT * FROM pelanggan WHERE tmp_lahir='jakarta' AND jk='P';
--- 6.	Tampilkan data pelanggan yang ID nya 2, 4 dan 6
+-- 6.
 SELECT * from pelanggan WHERE id IN (2,4,6);
--- 7.	Tampilkan data produk yang harganya antara 500 ribu sampai 6 juta
+-- 7.	
 SELECT * FROM produk WHERE harga_jual >= 500000 AND harga_jual <= 6000000;
 
 -- Soal 3
--- 1.	Tampilkan produk yang kode awalnya huruf K dan huruf M
+-- 1.	
 SELECT * FROM produk WHERE kode LIKE 'K%' OR kode LIKE 'M%';
--- 2.	Tampilkan produk yang kode awalnya bukan huruf M
+-- 2.	
 SELECT * FROM produk WHERE kode NOT LIKE 'M%';
--- 3.	Tampilkan produk-produk televisi
+-- 3.	
 SELECT * FROM produk WHERE nama LIKE 'TV%';
--- 4.	Tampilkan pelanggan mengandung huruf 'SA'
+-- 4.	
 SELECT * FROM pelanggan WHERE nama_pelanggan LIKE 'S%' OR 'A%';
--- 5.	Tampilkan pelanggan yang lahirnya bukan di Jakarta dan mengandung huruf ‘yo‘
+-- 5.	
 SELECT * FROM pelanggan WHERE tmp_lahir != 'jakarta' AND nama_pelanggan LIKE 'y%' OR 'o%';
--- 6.	Tampilkan pelanggan yang karakter huruf ke – 2 nya adalah A
+-- 6.	
 SELECT * FROM pelanggan WHERE nama_pelanggan LIKE '_A%';
 
 -- Soal 4
--- 1.	Tampilkan 2 data produk termahal
+-- 1.
 SELECT *FROM produk ORDER BY harga_beli DESC LIMIT 2;
--- 2.	Tampilkan produk yang paling murah
+-- 2.	
 SELECT * FROM produk ORDER BY harga_beli ASC LIMIT 1;
--- 3.	Tampilkan produk yang stoknya paling banyak
+-- 3.	
 SELECT * FROM produk ORDER BY stok DESC LIMIT 1;
--- 4.	Tampilkan dua produk yang stoknya paling sedikit
+-- 4.
 SELECT * FROM produk ORDER BY stok ASC LIMIT 2;
--- 5.	Tampilkan pelanggan yang paling muda
+-- 5.	
 SELECT * FROM pelanggan ORDER BY tgl_lahir DESC LIMIT 1;
--- 6.	Tampilkan pelanggan yang paling tua
+-- 6.	
 SELECT * FROM pelanggan ORDER BY tgl_lahir ASC LIMIT 1;
