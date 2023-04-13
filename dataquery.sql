@@ -1,4 +1,4 @@
-
+soal nomer satu tidak saya tampilkan karena sudah di bahas di sesi pagi
 -- Soal 2
 
 SELECT * from produk WHERE stok=3 OR stok=10;
